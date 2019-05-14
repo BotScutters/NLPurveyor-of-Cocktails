@@ -16,7 +16,7 @@ While the front-end will be simple to interact with, the system will house three
 
 * An engine for tokenizing plain-text descriptions of cocktails into a machine interpretable design matrix
 * A separate system for parsing cocktail recipes into a desciptive design matrix.
-* A model, likely a neural net, trained to transform a description-space input to an ingredient space output
+* A model trained to transform a description-space input to an ingredient space output
 
 ## Data Sources
 
@@ -33,7 +33,7 @@ By scraping these and maybe more websites for cocktail information, we should ho
 
 ### Tokenizing Descriptions
 
-To tokenize the descriptions, I'll likely make use of tools such as NLTK, Gensim, and SpaCY. I'll remove stop words, tokenize various ngrams, extract named entities, and maybe more. In ideal form, the description engine will leverage pre-trained models to recognize words with similar meanings as well as effectively recognize and respond to requests and negations (i.e. distinguish between "with tequila" and "no tequila").
+To tokenize the descriptions, I'll likely make use of tools such as NLTK, Gensim, and SpaCy. I'll remove stop words, tokenize various ngrams, extract named entities, and maybe more. In ideal form, the description engine will leverage pre-trained models to recognize words with similar meanings as well as effectively recognize and respond to requests and negations (i.e. distinguish between "with tequila" and "no tequila").
 
 ### Tokenizing Recipes
 
@@ -49,7 +49,7 @@ At the heart of SpeakEasy is a transfer function which allows us to convert a ve
 
 ### User Interface
 
-The baseline interface I'd like to built is a flask app with a text box for input. A user can enter whatever input they desire into the text box and the model will generate an output to match. For my MVP, I'll have the model select an existing that most nearly matches the request, but as an extension I would like to add the ability for the model to interpolate between recipes and invent new cocktails for each request.
+The baseline interface I'd like to built is a flask app with a text box for input. A user can enter whatever input they desire into the text box and the model will generate an output to match. For my MVP, I'll have the model select an existing cocktail that most nearly matches the request, but as an extension I would like to add the ability for the model to interpolate between recipes and invent new cocktails for each request.
 
 To guide the user's choices, I will offer some suggestions on the page of types of inputs that may yield better results.
 
